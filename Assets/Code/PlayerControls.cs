@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControls : MonoBehaviour
 {
@@ -10,10 +11,9 @@ public class PlayerControls : MonoBehaviour
     public Rigidbody2D Rigidbody;
     public float Jump;
     public Rigidbody2D Deathwall;
+
     void Update()
     {
-        //PRINT COLLISION LINES FOR MILESTONE!
-
         float xMove = Input.GetAxis("Horizontal");
 
         Vector2 newPosition = gameObject.transform.position;
@@ -30,11 +30,11 @@ public class PlayerControls : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.A) || (Input.GetKeyUp(KeyCode.LeftArrow)))
         {
-            Speed = 0.35f;
+            Speed = 0.15f;
         }
         if (Input.GetKeyUp(KeyCode.D) || (Input.GetKeyUp(KeyCode.RightArrow)))
         {
-            Speed = 0.35f;
+            Speed = 0.15f;
         }
         if (Input.GetKeyDown(KeyCode.A) || (Input.GetKeyDown(KeyCode.LeftArrow)))
         {
@@ -45,12 +45,17 @@ public class PlayerControls : MonoBehaviour
             Speed = 5;
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision) //Why aren't you working..?
+    private void OnCollisionEnter2D(Collision2D collision) //Why aren't you working..?
     {
         if (collision.gameObject.tag == "Deathwall")
         {
+            Debug.Log("Ouch!!");
             Vector3 SpawnPosition = new Vector3(-6.9f, -4.42f, 0f);
             transform.position = SpawnPosition;
+        }
+        if (collision.gameObject.tag == "Platform")
+        {
+            Debug.Log("Collision with platform detected.");
         }
     }
     void JumpReset()
