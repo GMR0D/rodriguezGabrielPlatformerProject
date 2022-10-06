@@ -26,15 +26,15 @@ public class PlayerControls : MonoBehaviour
         {
             Rigidbody.AddForce(Vector2.up * Jump, ForceMode2D.Impulse);
             Jump = 0;
-            Invoke("JumpReset", 1);
+            Invoke("JumpReset", 1.2f);
         }
         if (Input.GetKeyUp(KeyCode.A) || (Input.GetKeyUp(KeyCode.LeftArrow)))
         {
-            Speed = 0.15f;
+            Speed = 0.25f;
         }
         if (Input.GetKeyUp(KeyCode.D) || (Input.GetKeyUp(KeyCode.RightArrow)))
         {
-            Speed = 0.15f;
+            Speed = 0.25f;
         }
         if (Input.GetKeyDown(KeyCode.A) || (Input.GetKeyDown(KeyCode.LeftArrow)))
         {
