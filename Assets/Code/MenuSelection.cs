@@ -7,17 +7,25 @@ public class MenuSelection : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetKey(KeyCode.S)) //"Select Character" menu
+        if (Input.GetKey(KeyCode.S))
         {
-            SceneManager.LoadScene(0);
-        }
-        if (Input.GetKey(KeyCode.H)) //"How To Play" menu
-        {
-            SceneManager.LoadScene(2);
-        }
-        if (Input.GetKey(KeyCode.Q)) //Quit
-        {
-            Application.Quit();
+        SceneManager.LoadScene(3);
         }
     }
+    //void Update()
+    //{
+    //if (Input.GetKey(KeyCode.S)) //"Select Character" menu
+    //{
+    //SceneManager.LoadScene(0);
+    //}
+    //if (Input.GetKey(KeyCode.H)) //"How To Play" menu
+    //{
+    //SceneManager.LoadScene(2);
+    //}
+    //if (Input.GetKey(KeyCode.Q)) //Quit
+    //{
+    //Application.Quit();
+    //}
+    //}
+    //}
 }
