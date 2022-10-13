@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Deathwall
   - Platform
+  - Spike
   layers:
   - Default
   - TransparentFX

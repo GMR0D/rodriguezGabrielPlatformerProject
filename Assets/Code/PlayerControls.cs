@@ -12,6 +12,11 @@ public class PlayerControls : MonoBehaviour
     public float Jump;
     public Rigidbody2D Deathwall;
 
+    void Start()
+    {
+        Vector3 SpawnPosition = new Vector3(-6.9f, -4.42f, 0f);
+        transform.position = SpawnPosition;
+    }
     void Update()
     {
         float xMove = Input.GetAxis("Horizontal");
@@ -44,18 +49,22 @@ public class PlayerControls : MonoBehaviour
         {
             Speed = 5;
         }
-    }
-    private void OnCollisionEnter2D(Collision2D collision) //Why aren't you working..?
-    {
-        if (collision.gameObject.tag == "Deathwall")
+        if (Input.GetKeyDown(KeyCode.H))
         {
-            Debug.Log("Ouch!!");
+            //???
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "CrystalSpike")
+        {
             Vector3 SpawnPosition = new Vector3(-6.9f, -4.42f, 0f);
             transform.position = SpawnPosition;
         }
-        if (collision.gameObject.tag == "Platform")
+        if (collision.gameObject.tag == "Deathwall")
         {
-            Debug.Log("Collision with platform detected.");
+            Vector3 SpawnPosition = new Vector3(-6.9f, -4.42f, 0f);
+            transform.position = SpawnPosition;
         }
     }
     void JumpReset()
