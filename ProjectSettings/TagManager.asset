@@ -7,6 +7,7 @@ TagManager:
   - Deathwall
   - Platform
   - Spike
+  - SpawnerActivation
   layers:
   - Default
   - TransparentFX
