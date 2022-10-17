@@ -11,6 +11,7 @@ public class PlayerControls : MonoBehaviour
     public Rigidbody2D Rigidbody;
     public float Jump;
     public Rigidbody2D Deathwall;
+    public EnemyManager EManager;
 
     void Start()
     {
@@ -52,6 +53,7 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.H))
         {
             //???
+            //How to initiate spell casting??
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -60,13 +62,23 @@ public class PlayerControls : MonoBehaviour
         {
             Vector3 SpawnPosition = new Vector3(-6.9f, -4.42f, 0f);
             transform.position = SpawnPosition;
+            //EManager.EnemyRestart(collision.gameObject.GetComponent<Spawner>().SpawnPosition.position);
         }
         if (collision.gameObject.tag == "Deathwall")
         {
             Vector3 SpawnPosition = new Vector3(-6.9f, -4.42f, 0f);
             transform.position = SpawnPosition;
+            //EManager.EnemyRestart(collision.gameObject.GetComponent<Spawner>().SpawnPosition.position);
+
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "SpawnerActivation")
+        {
+            EManager.EnemySpawn(collision.gameObject.GetComponent<Spawner>().SpawnPosition.position);
+        }
+    } 
     void JumpReset()
     {
         Jump = 8;

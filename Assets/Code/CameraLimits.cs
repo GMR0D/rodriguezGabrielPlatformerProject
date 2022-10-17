@@ -7,10 +7,8 @@ public class CameraLimits : MonoBehaviour
     public GameObject Player;
     void Update()
     {
-        //Add clamps!
-
         Player = GameObject.FindGameObjectWithTag("Player");
-        Vector3 playerpos = new Vector3(((Player.transform.position.x) + 6.55f), -0.23f, -10);
-        transform.position = playerpos;
+        Vector3 playerposition = new Vector3(((Player.transform.position.x) + 6.55f), -0.23f, -10);
+        transform.position = playerposition;
     }
 }

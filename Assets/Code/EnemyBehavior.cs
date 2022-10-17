@@ -6,16 +6,21 @@ public class EnemyBehavior : MonoBehaviour
 {
     public GameObject Player;
     public GameObject SpawnerActivation;
-    public Transform Spawn;
     public GameObject Hexer;
+    public GameObject EnemySpell;
+    public Transform SpellSummon;
 
-    void Update()
+    void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         SpawnerActivation = GameObject.FindGameObjectWithTag("SpawnerActivation");
 
-
-        //if Player collides with SpawnerActivation...Instantiate(Hexer, Spawn.position, Spawn.rotation);
+    }
+    private void Spellcasting()
+    {
+        //Instantiate(EnemySpell, SpellSummon.position, SpellSummon.rotation);
+        //Move "EnemySpell" towards player's location periodically
     }
 }
+
 
