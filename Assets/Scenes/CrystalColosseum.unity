@@ -801,6 +801,37 @@ Transform:
   m_Father: {fileID: 1753743483}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &424987425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 424987426}
+  m_Layer: 0
+  m_Name: SummonSpell (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &424987426
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424987425}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.08, y: 0.72, z: -0.21872792}
+  m_LocalScale: {x: 1.2917, y: 1.2917, z: 1.2917}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1530753642}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &456024103
 GameObject:
   m_ObjectHideFlags: 0
@@ -2363,6 +2394,10 @@ MonoBehaviour:
   Jump: 8
   Deathwall: {fileID: 1260394889}
   EManager: {fileID: 1771097938}
+  SpellSummon: {fileID: 424987426}
+  PlayerSpell: {fileID: 3472910016851742421, guid: 33451e7ed03d5d24ebfad6f88bd9d543, type: 3}
+  SpellSpeed: 0.01
+  SpellClone: {fileID: 0}
 --- !u!212 &1530753641
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2426,7 +2461,8 @@ Transform:
   m_LocalPosition: {x: -11.8, y: 11.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 424987426}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2523,6 +2559,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731353179258596625, guid: 344da9b89a7dd744691c9ef03eb9c0c9, type: 3}
       propertyPath: m_Name
+      value: Hexer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731353179258596625, guid: 344da9b89a7dd744691c9ef03eb9c0c9, type: 3}
+      propertyPath: m_TagString
       value: Hexer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2840,6 +2880,11 @@ MonoBehaviour:
   HexerPos: {fileID: 1535450822}
   EnemySpawnPos: {fileID: 1976423173}
   RestartSpawn: {fileID: 1948012081}
+  EnemySpell: {fileID: 6688172685180734237, guid: 3bdaf458e1241b144af565be58335b66, type: 3}
+  Player: {fileID: 1530753642}
+  SpellSummon: {fileID: 128240460}
+  SpawnerActivation: {fileID: 478444709}
+  Speed: 3
 --- !u!4 &1771097939
 Transform:
   m_ObjectHideFlags: 0

@@ -8,6 +8,9 @@ TagManager:
   - Platform
   - Spike
   - SpawnerActivation
+  - EnemySpell
+  - PlayerSpell
+  - Hexer
   layers:
   - Default
   - TransparentFX
