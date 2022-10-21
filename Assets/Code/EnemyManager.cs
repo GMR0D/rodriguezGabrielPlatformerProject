@@ -12,6 +12,7 @@ public class EnemyManager : MonoBehaviour
     public Transform Player;
     public Transform SpellSummon;
     public GameObject SpawnerActivation;
+    public GameObject PlayerSprite;
 
     public float Speed = 0.01f;
 
@@ -21,7 +22,11 @@ public class EnemyManager : MonoBehaviour
         Hexer.transform.position = RestartSpawn.position;
         SpawnerActivation = GameObject.FindGameObjectWithTag("SpawnerActivation");
     }
-    
+
+    private void LateUpdate()
+    {
+        PlayerSprite = GameObject.FindGameObjectWithTag("Player");
+    }
     public void EnemySpawn(Vector2 position)
     {
         Hexer.transform.position = EnemySpawnPos.position;
@@ -30,7 +35,7 @@ public class EnemyManager : MonoBehaviour
     private void Spellcasting()
     {
         GameObject NewEnemySpell = Instantiate(EnemySpell, SpellSummon.position, SpellSummon.rotation);
-        Vector2 velocity = new Vector2((transform.position.x + Player.transform.position.x) * Speed, (transform.position.y - Player.transform.position.y) * Speed);
+        Vector2 velocity = new Vector2((transform.position.x + PlayerSprite.transform.position.x) * Speed, (transform.position.y - PlayerSprite.transform.position.y) * Speed);
         NewEnemySpell.GetComponent<Rigidbody2D>().velocity = velocity;
         Destroy(NewEnemySpell, 2);
     }

@@ -7,8 +7,6 @@ public class EnemyBehavior : MonoBehaviour
     public GameObject Player;
     public GameObject SpawnerActivation;
     public GameObject Hexer;
-
-    
 }
 
 

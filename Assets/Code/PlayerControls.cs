@@ -12,21 +12,14 @@ public class PlayerControls : MonoBehaviour
     public float Jump;
     public Rigidbody2D Deathwall;
     public EnemyManager EManager;
-    private float AttackCharge = 0;
-    public Transform SpellSummon;
-    public GameObject PlayerSpell;
-    public float SpellSpeed = 0.01f;
-    public GameObject SpellClone;
+    public GameObject ExitPortal;
 
     void Start()
     {
         Vector3 SpawnPosition = new Vector3(-6.9f, -4.42f, 0f);
         transform.position = SpawnPosition;
     }
-    private void LateUpdate()
-    {
-        SpellClone = GameObject.FindGameObjectWithTag("PlayerSpell");
-    }
+
     void Update()
     {
         float xMove = Input.GetAxis("Horizontal");
@@ -35,7 +28,7 @@ public class PlayerControls : MonoBehaviour
 
         newPosition.x += xMove * Speed * Time.deltaTime;
 
-        transform.position = newPosition; 
+        transform.position = newPosition;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -59,61 +52,12 @@ public class PlayerControls : MonoBehaviour
         {
             Speed = 5;
         }
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            if (AttackCharge == 0)
-            {
-                AttackCharge += 1;
-                Debug.Log("1!");
-            }
-            else
-            { 
-                AttackCharge = 0; 
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            if (AttackCharge == 1)
-            {
-                AttackCharge += 1;
-                Debug.Log("2!");
-
-            }
-            else
-            {
-                AttackCharge = 0;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            if (AttackCharge == 2)
-            {
-                Instantiate(PlayerSpell, SpellSummon.position, SpellSummon.rotation);
-                if (Input.GetKeyDown(KeyCode.A))
-                {
-                    Rigidbody.velocity = Vector3.left * SpellSpeed;
-                    Invoke("DestroySpell", 2);
-                }
-                else
-                {
-                    Rigidbody.velocity = Vector3.right * SpellSpeed;
-                    Invoke("DestroySpell", 2);
-                }
-            }
-            AttackCharge = 0;
-        }
-    }
-
-    private void DestroySpell()
-    {
-        Destroy(SpellClone);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "CrystalSpike")
         {
             SceneManager.LoadScene(3);
-
         }
         if (collision.gameObject.tag == "Deathwall")
         {
@@ -127,12 +71,17 @@ public class PlayerControls : MonoBehaviour
         {
             SceneManager.LoadScene(3);
         }
+        
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+        private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "SpawnerActivation")
         {
             EManager.EnemySpawn(collision.gameObject.GetComponent<Spawner>().SpawnPosition.position);
+        }
+        if (collision.gameObject.tag == "ExitPortal")
+        {
+            SceneManager.LoadScene(1);
         }
     } 
     void JumpReset()

@@ -11,6 +11,8 @@ TagManager:
   - EnemySpell
   - PlayerSpell
   - Hexer
+  - PlayerSpellSummon
+  - ExitPortal
   layers:
   - Default
   - TransparentFX
