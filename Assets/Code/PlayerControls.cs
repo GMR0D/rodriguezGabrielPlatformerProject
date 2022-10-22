@@ -11,7 +11,7 @@ public class PlayerControls : MonoBehaviour
     public Rigidbody2D Rigidbody;
     public float Jump;
     public Rigidbody2D Deathwall;
-    public EnemyManager EManager;
+    public EnemyBehavior EBehavior;
     public GameObject ExitPortal;
 
     void Start()
@@ -52,6 +52,15 @@ public class PlayerControls : MonoBehaviour
         {
             Speed = 5;
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+           Application.Quit();
+        }
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -77,7 +86,7 @@ public class PlayerControls : MonoBehaviour
     {
         if (collision.gameObject.tag == "SpawnerActivation")
         {
-            EManager.EnemySpawn(collision.gameObject.GetComponent<Spawner>().SpawnPosition.position);
+            EBehavior.EnemySpawn();
         }
         if (collision.gameObject.tag == "ExitPortal")
         {

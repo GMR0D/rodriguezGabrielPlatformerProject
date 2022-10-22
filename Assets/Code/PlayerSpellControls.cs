@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerSpellControls : MonoBehaviour
 {
     public float SpellSpeed = 10;
-    public Rigidbody2D SpellRB;
     public GameObject SpellClone;
     public GameObject PlayerSpell;
     private float AttackCharge = 0;
@@ -46,9 +45,9 @@ public class PlayerSpellControls : MonoBehaviour
         {
             if (AttackCharge == 2)
             {
-                Instantiate(PlayerSpell, SpellSummon.position, SpellSummon.rotation);
-                SpellRB.velocity = Vector3.right * SpellSpeed;
-                InvokeRepeating("DestroySpell", 0, 5);
+                GameObject PlayersSpell = Instantiate(PlayerSpell,transform.position,Quaternion.identity);
+                PlayersSpell.GetComponent<Rigidbody2D>().velocity = Vector3.right * SpellSpeed;
+                Invoke("DestroySpell", 2);
             }
             AttackCharge = 0;
         }

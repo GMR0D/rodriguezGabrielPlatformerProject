@@ -11,6 +11,14 @@ public class MenuSelection : MonoBehaviour
         {
         SceneManager.LoadScene(3);
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
     //void Update()
     //{
