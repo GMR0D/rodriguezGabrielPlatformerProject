@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CrystalColosseum.unity
     guid: 2c2f43f08a008ca40981cec072b2e526
+  - enabled: 1
+    path: Assets/Scenes/MtOfMisfortune.unity
+    guid: a522a96ae42ab89439b0402be6d83978
+  - enabled: 1
+    path: Assets/Scenes/SanctumMenu.unity
+    guid: 5a17109ba6525024f8c08babb5fa7478
+  - enabled: 1
+    path: Assets/Scenes/MisfortuneMenu.unity
+    guid: 2a77ab2a55ada0948af6e866dc670320
+  - enabled: 1
+    path: Assets/Scenes/ColosseumMenu.unity
+    guid: 55d924078e50de740aeb41c6e42e2ff0
   m_configObjects: {}

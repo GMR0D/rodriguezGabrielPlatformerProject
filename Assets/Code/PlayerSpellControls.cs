@@ -45,7 +45,7 @@ public class PlayerSpellControls : MonoBehaviour
         {
             if (AttackCharge == 2)
             {
-                GameObject PlayersSpell = Instantiate(PlayerSpell,transform.position,Quaternion.identity);
+                GameObject PlayersSpell = Instantiate(PlayerSpell,SpellSummon.position,Quaternion.identity);
                 PlayersSpell.GetComponent<Rigidbody2D>().velocity = Vector3.right * SpellSpeed;
                 Invoke("DestroySpell", 2);
             }
