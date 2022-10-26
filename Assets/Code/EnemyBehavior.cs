@@ -28,7 +28,7 @@ public class EnemyBehavior : MonoBehaviour
         Vector2 velocity = PlayerSprite.transform.position - transform.position;
         velocity.Normalize();
         NewEnemySpell.GetComponent<Rigidbody2D>().AddForce(Speed * velocity * Time.deltaTime, ForceMode2D.Impulse);
-        Destroy(NewEnemySpell, 5);
+        Destroy(NewEnemySpell, 3.8f);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

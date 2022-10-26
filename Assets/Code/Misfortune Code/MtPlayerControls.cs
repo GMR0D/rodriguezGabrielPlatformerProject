@@ -36,11 +36,11 @@ public class MtPlayerControls : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.A) || (Input.GetKeyUp(KeyCode.LeftArrow)))
         {
-            Speed = 6;
+            Speed = 6.5f;
         }
         if (Input.GetKeyUp(KeyCode.D) || (Input.GetKeyUp(KeyCode.RightArrow)))
         {
-            Speed = 6;
+            Speed = 6.5f;
         }
         if (Input.GetKeyDown(KeyCode.A) || (Input.GetKeyDown(KeyCode.LeftArrow)))
         {
@@ -66,6 +66,14 @@ public class MtPlayerControls : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "Deathwall2")
+        {
+            SceneManager.LoadScene(4);
+        }
+        if (collision.gameObject.tag == "EnemySpell")
+        {
+            SceneManager.LoadScene(4);
+        }
+        if (collision.gameObject.tag == "Hexer")
         {
             SceneManager.LoadScene(4);
         }
