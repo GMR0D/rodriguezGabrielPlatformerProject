@@ -181,6 +181,23 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7219463882632610896, guid: 3e1cb02e3ebd39944beaf1dda00a4309, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3e1cb02e3ebd39944beaf1dda00a4309, type: 3}
+--- !u!1 &1635843765 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7219463882632610897, guid: 3e1cb02e3ebd39944beaf1dda00a4309, type: 3}
+  m_PrefabInstance: {fileID: 1635843764}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1635843766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635843765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cfa795a562e99e41892b5093a6cca08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1941880282
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3500829585740182084, guid: 9a4910ddc6bd780479a5efa3790d55dc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 93
+      value: 212
       objectReference: {fileID: 0}
     - target: {fileID: 3500829585740182084, guid: 9a4910ddc6bd780479a5efa3790d55dc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -522,10 +539,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3500829585740182087, guid: 9a4910ddc6bd780479a5efa3790d55dc, type: 3}
       propertyPath: m_text
-      value: '"An abandoned manor with little to no light inside its halls. Bring
-        a torch."
+      value: '"An abandoned manor with little to no light within its emply halls.
+        Remember to bring a torch."
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3500829585740182087, guid: 9a4910ddc6bd780479a5efa3790d55dc, type: 3}
+      propertyPath: m_margin.x
+      value: -83.20308
       objectReference: {fileID: 0}
     - target: {fileID: 3500829586715532543, guid: 9a4910ddc6bd780479a5efa3790d55dc, type: 3}
       propertyPath: m_LocalScale.x
