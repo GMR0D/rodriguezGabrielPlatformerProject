@@ -11,10 +11,10 @@ public class MenuMenu : MonoBehaviour
         {
             SceneManager.LoadScene(7);
         }
-        //if (Input.GetKey(KeyCode.Alpha2))
-        //{
-            //SceneManager.LoadScene(5);
-        //}
+        if (Input.GetKey(KeyCode.Alpha2))
+        {
+            SceneManager.LoadScene(5);
+        }
         if (Input.GetKey(KeyCode.Alpha3))
         {
             SceneManager.LoadScene(6);
