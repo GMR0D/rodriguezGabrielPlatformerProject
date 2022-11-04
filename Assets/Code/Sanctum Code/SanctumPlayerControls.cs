@@ -54,7 +54,7 @@ public class SanctumPlayerControls : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -64,10 +64,6 @@ public class SanctumPlayerControls : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "CrystalSpike")
-        {
-            SceneManager.LoadScene(8);
-        }
         if (collision.gameObject.tag == "Deathwall")
         {
             SceneManager.LoadScene(8);
@@ -90,7 +86,7 @@ public class SanctumPlayerControls : MonoBehaviour
         }
         if (collision.gameObject.tag == "ExitPortal")
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
     }
     void JumpReset()

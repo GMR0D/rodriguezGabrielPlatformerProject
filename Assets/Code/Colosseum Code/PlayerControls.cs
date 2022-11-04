@@ -54,7 +54,7 @@ public class PlayerControls : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -90,7 +90,7 @@ public class PlayerControls : MonoBehaviour
         }
         if (collision.gameObject.tag == "ExitPortal")
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
     } 
     void JumpReset()

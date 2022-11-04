@@ -9,7 +9,7 @@ public class HelpMenu : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.P))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
