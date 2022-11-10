@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SightlessSanctum.unity
     guid: 9ce197721b329d54fbb522980a9e914a
+  - enabled: 1
+    path: Assets/Scenes/MtSecret.unity
+    guid: fb920b3b8d3cb934d942333ac71e7f5a
   m_configObjects: {}

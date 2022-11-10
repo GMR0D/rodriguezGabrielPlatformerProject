@@ -13,6 +13,8 @@ public class PlayerControls : MonoBehaviour
     public Rigidbody2D Deathwall;
     public EnemyBehavior EBehavior;
     public GameObject ExitPortal;
+    public bool CanJump;
+    public Animator MyAnimator;
 
     void Start()
     {
@@ -30,11 +32,17 @@ public class PlayerControls : MonoBehaviour
 
         transform.position = newPosition;
 
+        MyAnimator.SetInteger("Xmove", Mathf.RoundToInt(xMove));
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Rigidbody.AddForce(Vector2.up * Jump, ForceMode2D.Impulse);
-            Jump = 0;
-            Invoke("JumpReset", 1.2f);
+            if (CanJump)
+            {
+                Rigidbody.AddForce(Vector2.up * Jump, ForceMode2D.Impulse);
+                Jump = 0;
+                CanJump = false;
+                Invoke("JumpReset", 1.2f);
+            }
         }
         if (Input.GetKeyUp(KeyCode.A) || (Input.GetKeyUp(KeyCode.LeftArrow)))
         {
@@ -96,5 +104,6 @@ public class PlayerControls : MonoBehaviour
     void JumpReset()
     {
         Jump = 8;
+        CanJump = true;
     }
 }

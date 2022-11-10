@@ -532,7 +532,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 90a2acbeca195c1478be20070dccaa6a, type: 3}
-  m_Color: {r: 0.8207547, g: 0.7258326, b: 0.63879496, a: 1}
+  m_Color: {r: 0.6415094, g: 0.56252396, b: 0.5174439, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2477,6 +2477,7 @@ GameObject:
   - component: {fileID: 1530753643}
   - component: {fileID: 1530753639}
   - component: {fileID: 1530753638}
+  - component: {fileID: 1530753644}
   m_Layer: 0
   m_Name: Square
   m_TagString: Player
@@ -2551,6 +2552,8 @@ MonoBehaviour:
   Deathwall: {fileID: 1260394889}
   EBehavior: {fileID: 1090926256}
   ExitPortal: {fileID: 622863112}
+  CanJump: 1
+  MyAnimator: {fileID: 1530753644}
 --- !u!212 &1530753641
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2635,6 +2638,26 @@ MonoBehaviour:
   SpellClone: {fileID: 0}
   PlayerSpell: {fileID: 3472910016851742421, guid: 33451e7ed03d5d24ebfad6f88bd9d543, type: 3}
   SpellSummon: {fileID: 1263644143}
+--- !u!95 &1530753644
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530753637}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 084ffd22483247441a6e9427f7b5bcb7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1535450821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3272,7 +3295,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 90a2acbeca195c1478be20070dccaa6a, type: 3}
-  m_Color: {r: 0.8235294, g: 0.7294118, b: 0.6392157, a: 1}
+  m_Color: {r: 0.6431373, g: 0.5647059, b: 0.5176471, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
