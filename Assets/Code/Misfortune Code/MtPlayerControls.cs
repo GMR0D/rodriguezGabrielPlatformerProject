@@ -70,7 +70,7 @@ public class MtPlayerControls : MonoBehaviour
     }
     void JumpReset()
     {
-        Jump = 8;
+        Jump = 9.5f;
         CanJump = true;
     }
     private void OnCollisionEnter2D(Collision2D collision)
