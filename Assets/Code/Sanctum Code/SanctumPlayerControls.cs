@@ -97,7 +97,7 @@ public class SanctumPlayerControls : MonoBehaviour
     }
     void JumpReset()
     {
-        Jump = 8;
+        Jump = 9.5f;
         CanJump = true;
     }
 }
