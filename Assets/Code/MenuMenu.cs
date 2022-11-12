@@ -21,7 +21,7 @@ public class MenuMenu : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.H))
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(10);
         }
         if (Input.GetKey(KeyCode.R))
         {

@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MtSecret.unity
     guid: fb920b3b8d3cb934d942333ac71e7f5a
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: ce8e4e55f169d0b40b53ef38704e6233
   m_configObjects: {}
