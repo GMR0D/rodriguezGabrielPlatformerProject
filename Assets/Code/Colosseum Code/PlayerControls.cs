@@ -103,7 +103,7 @@ public class PlayerControls : MonoBehaviour
     } 
     void JumpReset()
     {
-        Jump = 9.5f;
+        Jump = 8.5f;
         CanJump = true;
     }
 }
