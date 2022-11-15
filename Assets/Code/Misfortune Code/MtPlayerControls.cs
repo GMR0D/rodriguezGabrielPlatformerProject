@@ -93,6 +93,7 @@ public class MtPlayerControls : MonoBehaviour
         if (collision.gameObject.tag == "SpawnerActivation")
         {
             EBehavior.EnemySpawn();
+            Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "ExitPortal")
         {
