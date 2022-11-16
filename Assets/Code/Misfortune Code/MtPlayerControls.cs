@@ -14,7 +14,7 @@ public class MtPlayerControls : MonoBehaviour
     public EnemyBehavior EBehavior;
     public GameObject ExitPortal;
     public bool CanJump;
-    public Animator MyAnimator;
+    //public Animator MyAnimator;
 
     void Start()
     {
@@ -31,7 +31,7 @@ public class MtPlayerControls : MonoBehaviour
 
         transform.position = newPosition;
 
-        MyAnimator.SetInteger("Xmove", Mathf.RoundToInt(xMove));
+        //MyAnimator.SetInteger("Xmove", Mathf.RoundToInt(xMove));
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -45,11 +45,11 @@ public class MtPlayerControls : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.A) || (Input.GetKeyUp(KeyCode.LeftArrow)))
         {
-            Speed = 6.5f;
+            Speed = 7;
         }
         if (Input.GetKeyUp(KeyCode.D) || (Input.GetKeyUp(KeyCode.RightArrow)))
         {
-            Speed = 6.5f;
+            Speed = 7;
         }
         if (Input.GetKeyDown(KeyCode.A) || (Input.GetKeyDown(KeyCode.LeftArrow)))
         {
