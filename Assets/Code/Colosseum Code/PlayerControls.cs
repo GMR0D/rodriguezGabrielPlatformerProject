@@ -14,7 +14,7 @@ public class PlayerControls : MonoBehaviour
     public EnemyBehavior EBehavior;
     public GameObject ExitPortal;
     public bool CanJump;
-    //public Animator MyAnimator;
+    public Animator MyAnimator;
 
     void Start()
     {
@@ -31,8 +31,6 @@ public class PlayerControls : MonoBehaviour
         newPosition.x += xMove * Speed * Time.deltaTime;
 
         transform.position = newPosition;
-
-        //MyAnimator.SetInteger("Xmove", Mathf.RoundToInt(xMove));
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
