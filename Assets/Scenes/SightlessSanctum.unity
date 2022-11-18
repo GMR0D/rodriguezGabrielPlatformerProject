@@ -4033,6 +4033,7 @@ MonoBehaviour:
   SpellClone: {fileID: 0}
   PlayerSpell: {fileID: 2651030803357821841, guid: c6785307611574e42bc2f93a37d99c4c, type: 3}
   SpellSummon: {fileID: 1263644143}
+  SpellAnimator: {fileID: 1608682461}
 --- !u!114 &1608682458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4134,7 +4135,7 @@ Animator:
   m_GameObject: {fileID: 1608682454}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 084ffd22483247441a6e9427f7b5bcb7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

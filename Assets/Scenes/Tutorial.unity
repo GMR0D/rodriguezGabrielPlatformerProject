@@ -1567,6 +1567,7 @@ MonoBehaviour:
   SpellClone: {fileID: 0}
   PlayerSpell: {fileID: 3472910016851742421, guid: 33451e7ed03d5d24ebfad6f88bd9d543, type: 3}
   SpellSummon: {fileID: 1276499570}
+  SpellAnimator: {fileID: 908624727}
 --- !u!114 &908624724
 MonoBehaviour:
   m_ObjectHideFlags: 0

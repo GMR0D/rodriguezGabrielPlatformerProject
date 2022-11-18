@@ -30,7 +30,7 @@ public class CrystalBall : MonoBehaviour
     }
     private void Rotation()
     {
-        Vector3 rotationAdd = new Vector3(0, 0, 30);
+        Vector3 rotationAdd = new Vector3(0, 0, 15);
         transform.Rotate(rotationAdd);
     }
 }
