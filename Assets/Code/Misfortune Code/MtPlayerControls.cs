@@ -15,7 +15,6 @@ public class MtPlayerControls : MonoBehaviour
     public GameObject ExitPortal;
     public bool CanJump;
     public Animator MyAnimator;
-
     void Start()
     {
         Vector3 SpawnPosition = new Vector3(-7.2f, -3.2f, 0f);
@@ -48,7 +47,7 @@ public class MtPlayerControls : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.D) || (Input.GetKeyUp(KeyCode.RightArrow)))
         {
             Speed = 7;
-        }
+       }
         if (Input.GetKeyDown(KeyCode.A) || (Input.GetKeyDown(KeyCode.LeftArrow)))
         {
             Speed = 5;

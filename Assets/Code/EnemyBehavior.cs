@@ -11,8 +11,7 @@ public class EnemyBehavior : MonoBehaviour
     public GameObject EnemySpell;
     public GameObject PlayerSprite;
     public Transform EnemySpawnPos;
-
-    public float Speed = 0.1f;
+    public float Speed;
     private void LateUpdate()
     {
         PlayerSprite = GameObject.FindGameObjectWithTag("Player");

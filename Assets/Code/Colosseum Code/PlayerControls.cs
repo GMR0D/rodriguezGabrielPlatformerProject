@@ -74,6 +74,10 @@ public class PlayerControls : MonoBehaviour
         {
             SceneManager.LoadScene(3);
         }
+        if (collision.gameObject.tag == "Spike")
+        {
+            SceneManager.LoadScene(3);
+        }
         if (collision.gameObject.tag == "Deathwall")
         {
             SceneManager.LoadScene(3);
