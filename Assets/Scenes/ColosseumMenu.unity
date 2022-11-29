@@ -455,6 +455,34 @@ PrefabInstance:
       propertyPath: m_ReferenceResolution.y
       value: 1080
       objectReference: {fileID: 0}
+    - target: {fileID: 3500829584865826522, guid: 9a4910ddc6bd780479a5efa3790d55dc, type: 3}
+      propertyPath: m_fontSize
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3500829584865826522, guid: 9a4910ddc6bd780479a5efa3790d55dc, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3500829584865826522, guid: 9a4910ddc6bd780479a5efa3790d55dc, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.9137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 3500829584865826522, guid: 9a4910ddc6bd780479a5efa3790d55dc, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 3500829584865826522, guid: 9a4910ddc6bd780479a5efa3790d55dc, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3500829584865826522, guid: 9a4910ddc6bd780479a5efa3790d55dc, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
+    - target: {fileID: 3500829584865826522, guid: 9a4910ddc6bd780479a5efa3790d55dc, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294961558
+      objectReference: {fileID: 0}
     - target: {fileID: 3500829584865826523, guid: 9a4910ddc6bd780479a5efa3790d55dc, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.4891715
@@ -473,7 +501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3500829584865826523, guid: 9a4910ddc6bd780479a5efa3790d55dc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 368
+      value: 309
       objectReference: {fileID: 0}
     - target: {fileID: 3500829585120783430, guid: 9a4910ddc6bd780479a5efa3790d55dc, type: 3}
       propertyPath: m_LocalScale.x
@@ -513,7 +541,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3500829585740182084, guid: 9a4910ddc6bd780479a5efa3790d55dc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 130
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 3500829585740182087, guid: 9a4910ddc6bd780479a5efa3790d55dc, type: 3}
+      propertyPath: m_fontSize
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3500829585740182087, guid: 9a4910ddc6bd780479a5efa3790d55dc, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3500829586715532543, guid: 9a4910ddc6bd780479a5efa3790d55dc, type: 3}
       propertyPath: m_LocalScale.x
