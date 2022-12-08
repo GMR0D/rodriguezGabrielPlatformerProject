@@ -64,6 +64,7 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(10);
+            GameObject.FindGameObjectWithTag("MenuMusic").GetComponent<MenuMusic>().PlayMusic();
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -104,7 +105,7 @@ public class PlayerControls : MonoBehaviour
         }
         if (collision.gameObject.tag == "ExitPortal")
         {
-            SceneManager.LoadScene(10);
+            SceneManager.LoadScene(0);
         }
     } 
     void JumpReset()
