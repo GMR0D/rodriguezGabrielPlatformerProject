@@ -15,6 +15,7 @@ TagManager:
   - ExitPortal
   - SecretPortal
   - SpawnerActivation 2
+  - MenuMusic
   layers:
   - Default
   - TransparentFX
@@ -51,4 +52,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Frames
+    uniqueID: 3730147361
+    locked: 0
+  - name: Paintings
+    uniqueID: 2265010687
     locked: 0

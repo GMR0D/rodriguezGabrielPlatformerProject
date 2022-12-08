@@ -20,6 +20,9 @@ public class PlayerControls : MonoBehaviour
     {
         Vector3 SpawnPosition = new Vector3(-6.9f, -4.42f, 0f);
         transform.position = SpawnPosition;
+
+        GameObject.FindGameObjectWithTag("MenuMusic").GetComponent<MenuMusic>().StopMusic();
+
     }
 
     void Update()
@@ -60,7 +63,7 @@ public class PlayerControls : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(10);
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -72,23 +75,23 @@ public class PlayerControls : MonoBehaviour
     {
         if (collision.gameObject.name == "CrystalSpike")
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         }
         if (collision.gameObject.tag == "Spike")
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         }
         if (collision.gameObject.tag == "Deathwall")
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         }
         if (collision.gameObject.tag == "EnemySpell")
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         }
         if (collision.gameObject.tag == "Hexer")
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         }
         
     }
@@ -101,7 +104,7 @@ public class PlayerControls : MonoBehaviour
         }
         if (collision.gameObject.tag == "ExitPortal")
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(10);
         }
     } 
     void JumpReset()

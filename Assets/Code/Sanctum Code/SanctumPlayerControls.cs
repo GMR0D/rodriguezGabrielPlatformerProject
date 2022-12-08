@@ -21,6 +21,9 @@ public class SanctumPlayerControls : MonoBehaviour
     {
         Vector3 SpawnPosition = new Vector3(-6.9f, -4.42f, 0f);
         transform.position = SpawnPosition;
+
+        GameObject.FindGameObjectWithTag("MenuMusic").GetComponent<MenuMusic>().StopMusic();
+
     }
 
     void Update()
@@ -58,7 +61,7 @@ public class SanctumPlayerControls : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(10);
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -70,15 +73,15 @@ public class SanctumPlayerControls : MonoBehaviour
     {
         if (collision.gameObject.tag == "Deathwall")
         {
-            SceneManager.LoadScene(8);
+            SceneManager.LoadScene(7);
         }
         if (collision.gameObject.tag == "EnemySpell")
         {
-            SceneManager.LoadScene(8);
+            SceneManager.LoadScene(7);
         }
         if (collision.gameObject.tag == "Hexer")
         {
-            SceneManager.LoadScene(8);
+            SceneManager.LoadScene(7);
         }
 
     }
@@ -91,7 +94,7 @@ public class SanctumPlayerControls : MonoBehaviour
         }
         if (collision.gameObject.tag == "ExitPortal")
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(10);
         }
     }
     void JumpReset()

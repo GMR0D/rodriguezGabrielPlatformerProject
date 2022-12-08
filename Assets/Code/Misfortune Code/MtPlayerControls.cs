@@ -19,6 +19,9 @@ public class MtPlayerControls : MonoBehaviour
     {
         Vector3 SpawnPosition = new Vector3(-7.2f, -3.2f, 0f);
         transform.position = SpawnPosition;
+
+        GameObject.FindGameObjectWithTag("MenuMusic").GetComponent<MenuMusic>().StopMusic();
+
     }
     void Update()
     {
@@ -58,7 +61,7 @@ public class MtPlayerControls : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(10);
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -74,15 +77,15 @@ public class MtPlayerControls : MonoBehaviour
     {
         if (collision.gameObject.name == "Deathwall2")
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(3);
         }
         if (collision.gameObject.tag == "EnemySpell")
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(3);
         }
         if (collision.gameObject.tag == "Hexer")
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(3);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -94,7 +97,7 @@ public class MtPlayerControls : MonoBehaviour
         }
         if (collision.gameObject.tag == "ExitPortal")
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(10);
         }
         if (collision.gameObject.tag == "SecretPortal")
         {
