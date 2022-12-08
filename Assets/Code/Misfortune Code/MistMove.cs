@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class MistMove : MonoBehaviour
 {
-    public float Speed = 3;
-    public const float ScrollingWidth = 8;
-    public Vector2 LeftLimit;
-    public Vector2 Spawn;
+    public float speed = 3;
+    public const float scrollingWidth = 8;
+    public Vector2 leftLimit;
+    public Vector2 spawn;
 
     private void Start()
     {
-        Vector3 MistSpawn = Spawn;
+        Vector3 MistSpawn = spawn;
         transform.position = MistSpawn;
     }
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, LeftLimit, Speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, leftLimit, speed * Time.deltaTime);
 
-        if (transform.position.x <= LeftLimit.x)
+        if (transform.position.x <= leftLimit.x)
         {
-            Vector3 MistSpawn = Spawn;
+            Vector3 MistSpawn = spawn;
             transform.position = MistSpawn;
         }
     }

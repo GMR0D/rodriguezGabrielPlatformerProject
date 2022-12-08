@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class TutorialPlayer : MonoBehaviour
 {
-    public float Speed;
-    public float Health = 1;
-    public GameObject Player;
+    public float speed;
+    public float health = 1;
+    public GameObject player;
     public Rigidbody2D Rigidbody;
-    public float Jump;
-    public Rigidbody2D Deathwall;
-    public EnemyBehavior EBehavior;
-    public GameObject ExitPortal;
-    public bool CanJump;
-    public Animator MyAnimator;
+    public float jump;
+    public Rigidbody2D deathwall;
+    public EnemyBehavior eBehavior;
+    public GameObject exitPortal;
+    public bool canJump;
+    public Animator myAnimator;
 
     void Start()
     {
@@ -30,35 +30,35 @@ public class TutorialPlayer : MonoBehaviour
 
         Vector2 newPosition = gameObject.transform.position;
 
-        newPosition.x += xMove * Speed * Time.deltaTime;
+        newPosition.x += xMove * speed * Time.deltaTime;
 
         transform.position = newPosition;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (CanJump)
+            if (canJump)
             {
-                Rigidbody.AddForce(Vector2.up * Jump, ForceMode2D.Impulse);
-                Jump = 0;
-                CanJump = false;
+                Rigidbody.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
+                jump = 0;
+                canJump = false;
                 Invoke("JumpReset", 1.2f);
             }
         }
         if (Input.GetKeyUp(KeyCode.A) || (Input.GetKeyUp(KeyCode.LeftArrow)))
         {
-            Speed = 0.25f;
+            speed = 0.25f;
         }
         if (Input.GetKeyUp(KeyCode.D) || (Input.GetKeyUp(KeyCode.RightArrow)))
         {
-            Speed = 0.25f;
+            speed = 0.25f;
         }
         if (Input.GetKeyDown(KeyCode.A) || (Input.GetKeyDown(KeyCode.LeftArrow)))
         {
-            Speed = 5;
+            speed = 5;
         }
         if (Input.GetKeyDown(KeyCode.D) || (Input.GetKeyDown(KeyCode.RightArrow)))
         {
-            Speed = 5;
+            speed = 5;
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -98,7 +98,7 @@ public class TutorialPlayer : MonoBehaviour
     {
         if (collision.gameObject.tag == "SpawnerActivation")
         {
-            EBehavior.EnemySpawn();
+            eBehavior.EnemySpawn();
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "ExitPortal")
@@ -108,7 +108,7 @@ public class TutorialPlayer : MonoBehaviour
     }
     void JumpReset()
     {
-        Jump = 8.5f;
-        CanJump = true;
+        jump = 8.5f;
+        canJump = true;
     }
 }

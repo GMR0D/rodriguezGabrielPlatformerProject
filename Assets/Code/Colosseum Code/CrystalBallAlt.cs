@@ -4,27 +4,27 @@ using UnityEngine;
 
 public class CrystalBallAlt : MonoBehaviour
 {
-    public Vector2 UpLimit;
-    public Vector2 DownLimit;
-    public float Speed = 3;
-    public bool Up;
+    public Vector2 upLimit;
+    public Vector2 downLimit;
+    public float speed = 3;
+    public bool up;
     void Update()
     {
         InvokeRepeating("Rotation", 0, 1);
-        if (Up)
+        if (up)
         {
-            transform.position = Vector2.MoveTowards(transform.position, DownLimit, Speed * Time.deltaTime);
-            if (transform.position.y <= DownLimit.y) //Is current position past the left limit?
+            transform.position = Vector2.MoveTowards(transform.position, downLimit, speed * Time.deltaTime);
+            if (transform.position.y <= downLimit.y) //Is current position past the left limit?
             {
-                Up = false;
+                up = false;
             }
         }
         else
         {
-            transform.position = Vector2.MoveTowards(transform.position, UpLimit, Speed * Time.deltaTime);
-            if (transform.position.y >= UpLimit.y)
+            transform.position = Vector2.MoveTowards(transform.position, upLimit, speed * Time.deltaTime);
+            if (transform.position.y >= upLimit.y)
             {
-                Up = true;
+                up = true;
             }
         }
     }
