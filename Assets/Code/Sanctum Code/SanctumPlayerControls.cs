@@ -23,7 +23,6 @@ public class SanctumPlayerControls : MonoBehaviour
         transform.position = SpawnPosition;
 
         GameObject.FindGameObjectWithTag("MenuMusic").GetComponent<MenuMusic>().StopMusic();
-
     }
 
     void Update()
@@ -95,7 +94,7 @@ public class SanctumPlayerControls : MonoBehaviour
         }
         if (collision.gameObject.tag == "ExitPortal")
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(10);
         }
     }
     void JumpReset()

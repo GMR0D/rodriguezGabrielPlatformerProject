@@ -21,7 +21,6 @@ public class MtPlayerControls : MonoBehaviour
         transform.position = SpawnPosition;
 
         GameObject.FindGameObjectWithTag("MenuMusic").GetComponent<MenuMusic>().StopMusic();
-
     }
     void Update()
     {
@@ -98,11 +97,11 @@ public class MtPlayerControls : MonoBehaviour
         }
         if (collision.gameObject.tag == "ExitPortal")
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(10);
         }
         if (collision.gameObject.tag == "SecretPortal")
         {
-            SceneManager.LoadScene(9);
+            SceneManager.LoadScene(8);
         }
     }
 }

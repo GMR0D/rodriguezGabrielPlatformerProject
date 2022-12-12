@@ -22,9 +22,7 @@ public class PlayerControls : MonoBehaviour
         transform.position = SpawnPosition;
 
         GameObject.FindGameObjectWithTag("MenuMusic").GetComponent<MenuMusic>().StopMusic();
-
     }
-
     void Update()
     {
         float xMove = Input.GetAxis("Horizontal");
@@ -105,7 +103,7 @@ public class PlayerControls : MonoBehaviour
         }
         if (collision.gameObject.tag == "ExitPortal")
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(10);
         }
     } 
     void JumpReset()
