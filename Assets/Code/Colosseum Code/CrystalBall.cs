@@ -4,27 +4,27 @@ using UnityEngine;
 
 public class CrystalBall : MonoBehaviour
 {
-    public Vector2 leftLimit;
-    public Vector2 rightLimit;
-    public float speed = 3;
-    public bool left;
+    public Vector2 LeftLimit;
+    public Vector2 RightLimit;
+    public float Speed = 3;
+    public bool Left;
     void Update()
     {
         InvokeRepeating("Rotation", 0, 1);
-        if (left) //Is it moving left/Is Left true?
+        if (Left) //Is it moving left/Is Left true?
         {
-            transform.position = Vector2.MoveTowards(transform.position, leftLimit, speed * Time.deltaTime); //"Time.deltaTime" = Amount of time passed between each frame (neccesary for frame-by-frame movement)
-            if (transform.position.x <= leftLimit.x) //Is current position past the left limit?
+            transform.position = Vector2.MoveTowards(transform.position, LeftLimit, Speed * Time.deltaTime); //"Time.deltaTime" = Amount of time passed between each frame (neccesary for frame-by-frame movement)
+            if (transform.position.x <= LeftLimit.x) //Is current position past the left limit?
             {
-                left = false;
+                Left = false;
             }
         }
         else
         {
-            transform.position = Vector2.MoveTowards(transform.position, rightLimit, speed * Time.deltaTime);
-            if (transform.position.x >= rightLimit.x)
+            transform.position = Vector2.MoveTowards(transform.position, RightLimit, Speed * Time.deltaTime);
+            if (transform.position.x >= RightLimit.x)
             {
-                left = true;
+                Left = true;
             }
         }
     }

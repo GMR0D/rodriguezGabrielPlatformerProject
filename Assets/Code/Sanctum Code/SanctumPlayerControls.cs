@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class SanctumPlayerControls : MonoBehaviour
 {
-    public float speed;
-    public float health = 1;
-    public GameObject player;
+    public float Speed;
+    public float Health = 1;
+    public GameObject Player;
     public Rigidbody2D Rigidbody;
-    public float jump;
-    public Rigidbody2D deathwall;
-    public EnemyBehavior eBehavior;
-    public GameObject exitPortal;
-    public bool canJump;
-    public Animator myAnimator;
+    public float Jump;
+    public Rigidbody2D Deathwall;
+    public EnemyBehavior EBehavior;
+    public GameObject ExitPortal;
+    public bool CanJump;
+    public Animator MyAnimator;
 
 
     void Start()
@@ -32,32 +32,32 @@ public class SanctumPlayerControls : MonoBehaviour
 
         Vector2 newPosition = gameObject.transform.position;
 
-        newPosition.x += xMove * speed * Time.deltaTime;
+        newPosition.x += xMove * Speed * Time.deltaTime;
 
         transform.position = newPosition;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Rigidbody.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
-            jump = 0;
-            canJump = false;
+            Rigidbody.AddForce(Vector2.up * Jump, ForceMode2D.Impulse);
+            Jump = 0;
+            CanJump = false;
             Invoke("JumpReset", 1.2f);
         }
         if (Input.GetKeyUp(KeyCode.A) || (Input.GetKeyUp(KeyCode.LeftArrow)))
         {
-            speed = 0.25f;
+            Speed = 0.25f;
         }
         if (Input.GetKeyUp(KeyCode.D) || (Input.GetKeyUp(KeyCode.RightArrow)))
         {
-            speed = 0.25f;
+            Speed = 0.25f;
         }
         if (Input.GetKeyDown(KeyCode.A) || (Input.GetKeyDown(KeyCode.LeftArrow)))
         {
-            speed = 5;
+            Speed = 5;
         }
         if (Input.GetKeyDown(KeyCode.D) || (Input.GetKeyDown(KeyCode.RightArrow)))
         {
-            speed = 5;
+            Speed = 5;
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -90,7 +90,7 @@ public class SanctumPlayerControls : MonoBehaviour
     {
         if (collision.gameObject.tag == "SpawnerActivation")
         {
-            eBehavior.EnemySpawn();
+            EBehavior.EnemySpawn();
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "ExitPortal")
@@ -100,7 +100,7 @@ public class SanctumPlayerControls : MonoBehaviour
     }
     void JumpReset()
     {
-        jump = 8f;
-        canJump = true;
+        Jump = 8f;
+        CanJump = true;
     }
 }
